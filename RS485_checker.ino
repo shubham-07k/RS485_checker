@@ -6,6 +6,11 @@ const uint32_t TIMEOUT = 500UL;
 // Requesting msg
 uint8_t msg[] = {0x01, 0x03, 0x00, 0x1E, 0x00, 0x03, 0x65, 0xCD};
 
+/*
+TX: 01 03 00 1E 00 03 65 CD 
+RX: 01 03 06 00 09 00 0C 00 19 FC BD
+*/
+
 void setup() {
   Serial.begin(115200);
   Serial1.begin(9600, SERIAL_8N1, 16, 17);
@@ -53,10 +58,3 @@ void hexByte(byte b)
   Serial.print(b & 0xF, HEX);
   Serial.print(' ');
 }
-
-/*
-TX: 01 03 00 1E 00 03 65 CD 
-RX: 01 03 06 00 09 00 0C 00 19 FC BD
-*/
-
-
