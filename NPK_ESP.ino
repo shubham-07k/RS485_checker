@@ -38,13 +38,13 @@ void loop()
   if (result == node.ku8MBSuccess)
   {
     Serial.print("Nitro: ");
-    Serial.print(node.getResponseBuffer(0));
+    Serial.print(node.getResponseBuffer(0), HEX);
     Serial.println(" mg/kg");
     Serial.print("Phos: ");
-    Serial.print(node.getResponseBuffer(1));
+    Serial.print(node.getResponseBuffer(1),HEX);
     Serial.println(" mg/kg");
     Serial.print("Pot: ");
-    Serial.print(node.getResponseBuffer(3));
+    Serial.print(node.getResponseBuffer(3), HEX);
     Serial.println(" mg/kg");
 
   }
